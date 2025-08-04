@@ -1,0 +1,13 @@
+name: "Auto Update Project Board"
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  update_project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move Project Card (Simulation)
+        run: |
+          echo "Simulated action: A pull request was merged, moving the associated project card to Done."
